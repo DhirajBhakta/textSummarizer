@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>NITKIR</groupId>
+  <artifactId>textSummarizer</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>textSummarizer</name>
+  
+  
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp -->
+	<dependency>
+    	<groupId>edu.stanford.nlp</groupId>
+    	<artifactId>stanford-corenlp</artifactId>
+    	<version>3.8.0</version>
+	</dependency>
+		
+	<dependency>
+	    <groupId>sourceforge.net</groupId>
+	    <artifactId>jfuzzylogic</artifactId>
+	    <version>1.0</version>
+	    <scope>system</scope>
+	    <systemPath>${project.basedir}/src/main/resources/jFuzzyLogic.jar</systemPath>
+	</dependency>
+	  	
+  </dependencies>
+  
+  
+  
+</project>
+
