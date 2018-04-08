@@ -7,13 +7,27 @@
   
   
   <dependencies>
-  <!-- https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp -->
-	<dependency>
-    	<groupId>edu.stanford.nlp</groupId>
-    	<artifactId>stanford-corenlp</artifactId>
-    	<version>3.8.0</version>
-	</dependency>
-		
+ <!-- https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp -->
+<dependency>
+    <groupId>edu.stanford.nlp</groupId>
+    <artifactId>stanford-corenlp</artifactId>
+    <version>3.9.1</version>
+</dependency>
+<dependency>
+    <groupId>edu.stanford.nlp</groupId>
+    <artifactId>stanford-corenlp</artifactId>
+    <version>3.9.1</version>
+    <classifier>models</classifier>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/edu.mit/jwi -->
+<dependency>
+    <groupId>edu.mit</groupId>
+    <artifactId>jwi</artifactId>
+    <version>2.2.3</version>
+</dependency>
+
+
 	<dependency>
 	    <groupId>sourceforge.net</groupId>
 	    <artifactId>jfuzzylogic</artifactId>
