@@ -1,13 +1,17 @@
 package preprocessing;
 
-import preprocessing.Wordnet;
-import edu.mit.jwi.morph.WordnetStemmer;
+//import preprocessing.Wordnet;
+//import edu.mit.jwi.morph.WordnetStemmer;
 
 import java.io.*;
+import java.text.BreakIterator;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Properties;
+import static java.util.stream.Collectors.toList;
 
 import javax.swing.text.html.HTMLDocument.Iterator;
 
@@ -23,6 +27,7 @@ import edu.stanford.nlp.util.CoreMap;
 
 
 import main.Driver;
+import main.Sentence;
 
 
 public class preprocessor {
@@ -40,77 +45,41 @@ public class preprocessor {
         this.pipeline = new StanfordCoreNLP(props);
 	}
 	
-	public void read_doc()throws Exception
-	  {
-		
-	  // We need to provide file path as the parameter:
-	  // double back quote is to avoid compiler interpret words
-	  // like \test as \t (i.e. as a escape sequence)
-	  File file = new File("/home/srivalya/textSummarizer/src/sample_text1");
-	 
+	public void read_doc()throws Exception{
+	  File file = new File("sample_text");
 	  BufferedReader br = new BufferedReader(new FileReader(file));
 	 
-	  String st;
+	  String line;
+	  List<Sentence> sentences= new ArrayList<Sentence>();
 	  
-	  String[] words  = new String[0];
-	  ArrayList<String> word= new ArrayList<String>();
-	  
-	  while ((st = br.readLine()) != null)
-	  {
-		  words=st.split(" ");
+	  while ((line = br.readLine()) != null) {
 		  
-		  for (String s: words) {           
-		      
-			    String result = s.replaceAll("[^\\w\\s]","");
-			    
-
-			    String numRegex   = ".*[0-9].*";
-			    String alphaRegex = ".*[A-Z].*";
-
-			    if (!result.matches(numRegex) && !result.matches(alphaRegex)) {
-			    	
-			    	word.add(result);
-			    	   
-			    }
-			    else {
-			    	
-			    	result = result.replaceAll("\\d","");
-			    	word.add(result);
-	
-			    }
-		      		       
-		    }
-		    
+		  BreakIterator iterator = BreakIterator.getSentenceInstance(Locale.US);
+		  iterator.setText(line);
+		  int start = iterator.first();
+		  for (int end = iterator.next();
+		      end != BreakIterator.DONE;
+		      start = end, end = iterator.next()) {
+			  sentences.add(new Sentence(line.substring(start,end)));
+		  }
 	  }
 	  
-	   
-	  ArrayList<String> word_new= new ArrayList<String>();
-	  for(String b : word)
-	  		{
-      				
-				 if (Constants.stopwords.contains(b.toString()))
-				 {
-					 System.out.println(b.toString());
-					 
-				 }
-				 else
-				 {
-					 word_new.add(b);
-				 }
-				
-	  		}
-	  
-	  
-	  
-	  preprocessor slem = new preprocessor();
 	  
 	  String text = "";
-	 
-	  for (String s : word_new)
-	  {
-	     text += s + "\t";
+	  for(Sentence S: sentences) {
+		  S.chunks = S.getWords().stream()
+				  .filter(word -> !Constants.stopwords.contains(word))
+				  .collect(toList());
+		  text += String.join("\t",S.chunks.stream().toArray(String[]::new));
+		  
 	  }
 	  
+	  System.err.println(sentences);
+	  
+	 
+	  preprocessor slem = new preprocessor();
+	  
+	
 	  
       System.out.println(slem.lemmatize(text));
      
