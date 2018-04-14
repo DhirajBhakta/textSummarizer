@@ -1,0 +1,71 @@
+
+FUNCTION_BLOCK fuzzyInference	
+
+
+VAR_INPUT
+	title: REAL;				
+	s_len : REAL;
+	s_loc : REAL;
+	s_cntr : REAL;
+	num_data : REAL;
+END_VAR
+
+VAR_OUTPUT				
+	output : REAL;
+END_VAR
+
+FUZZIFY title			
+	TERM lo := (0, 1) (0.35, 0) ; 
+	TERM med := trape 0.05 0.35 0.5 0.8 ;
+	TERM hi := (0.4, 0) (0.7, 1) (1,1) (1,0) ;
+END_FUZZIFY
+
+FUZZIFY s_len			
+	TERM lo := (0, 1) (0.4, 0) ; 
+	TERM med := trape 0.1 0.4 0.55 0.75 ;
+	TERM hi := (0.45, 0) (0.7, 1) (1,1) (1,0) ;
+END_FUZZIFY
+
+FUZZIFY s_loc			
+	TERM lo := (0, 1) (0.35, 0) ; 
+	TERM med := trape 0.1 0.35 0.55 0.85 ;
+	TERM hi := (0.4, 0) (0.75, 1) (1,1) (1,0) ;
+END_FUZZIFY
+
+FUZZIFY s_cntr			
+	TERM lo := (0, 1) (0.2, 0) ; 
+	TERM med := trape 0.05 0.2 0.45 0.6 ;
+	TERM hi := (0.4, 0) (0.55, 1) (1,1) (1,0) ;
+END_FUZZIFY
+
+FUZZIFY num_data			
+	TERM lo := (0, 1) (0.35, 0) ; 
+	TERM med := trape 0.05 0.35 0.5 0.8 ;
+	TERM hi := (0.4, 0) (0.7, 1) (1,1) (1,0) ;
+END_FUZZIFY
+
+
+DEFUZZIFY output			
+	TERM unimp := (0,1) (0.3, 0);
+	TERM avg := trape 0.15 0.35 0.6 0.85;
+	TERM imp := (0.5,0) (0.75,1) (1,1) (1,0);
+	METHOD : COG;		
+	DEFAULT := 0;		
+END_DEFUZZIFY
+
+RULEBLOCK No1
+	AND : MIN;	// Use 'min' for 'and'
+	ACT : MIN;	// Use 'min' activation method
+	ACCU : MAX;	// Use 'max' accumulation method
+
+	RULE 1 : IF title IS hi AND s_len IS hi AND s_loc IS hi AND s_cntr IS hi AND num_data IS hi THEN output IS imp;
+	RULE 2 : IF title IS hi AND s_len IS hi AND s_loc IS hi AND s_cntr IS NOT hi AND num_data IS hi THEN output IS imp;
+	RULE 3 : IF title IS hi AND s_len IS hi AND s_loc IS hi AND s_cntr IS hi AND num_data IS NOT hi THEN output IS imp;	
+	RULE 4 : IF title IS hi AND s_len IS NOT hi AND s_loc IS NOT hi AND s_cntr IS NOT hi AND num_data IS NOT hi THEN output IS unimp;
+	RULE 5 : IF title IS NOT hi AND s_len IS NOT hi AND s_loc IS NOT hi AND s_cntr IS NOT hi AND num_data IS NOT hi THEN output IS unimp;
+	RULE 6 : IF title IS hi AND s_len IS NOT hi AND s_loc IS hi AND s_cntr IS NOT hi AND num_data IS hi THEN output IS avg;
+	RULE 7 : IF title IS NOT hi AND s_len IS hi AND s_loc IS NOT hi AND s_cntr IS hi AND num_data IS NOT hi THEN output IS avg;
+	RULE 8 : IF title IS med AND s_len IS med AND s_loc IS med AND s_cntr IS med AND num_data IS med THEN output IS avg;	
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK

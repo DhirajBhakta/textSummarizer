@@ -29,15 +29,31 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 
+import algorithms.*;
+
 public class Driver {
 
-  
-    public static void main(String[] args) throws Exception {
+	public static void printSummary(Sentence title, List<Sentence> sentences) {
+		System.out.println("SUMMARY:"+title.sentence+"\n-------------------------------------");
+		for(Sentence S:sentences)
+			System.out.print(S.sentence+"\n");
+	}
+    
+	
+	public static void main(String[] args) throws Exception {
        
-    	preprocessor prep=new preprocessor();
+    	List<Sentence> sentences = new preprocessor().read_doc();
+    	List<Sentence> summary;
+    	Sentence title = sentences.get(0);
+    	sentences = sentences.subList(1, sentences.size());
     	
-    	prep.read_doc();
-    	
+    	Fuzzy fuzzy = new Fuzzy(title, sentences);
+    	summary= fuzzy.summary();
+    	printSummary(title, summary);
+  	
+    	BushyPath bushy = new BushyPath(sentences);
+    	summary = bushy.summary();
+    	printSummary(title, summary);
     }
 
 }

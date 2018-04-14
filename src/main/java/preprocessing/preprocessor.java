@@ -34,26 +34,22 @@ public class preprocessor {
 	
 	protected StanfordCoreNLP pipeline;
 	
-	
-	public preprocessor()
-	{
-	
+	public preprocessor() {
         Properties props;
         props = new Properties();
         props.put("annotators", "tokenize, ssplit, pos, lemma");
-
         this.pipeline = new StanfordCoreNLP(props);
 	}
 	
-	public void read_doc()throws Exception{
+	public List<Sentence> read_doc()throws Exception{
 	  File file = new File("sample_text");
 	  BufferedReader br = new BufferedReader(new FileReader(file));
 	 
 	  String line;
 	  List<Sentence> sentences= new ArrayList<Sentence>();
 	  
+	  //Split lines into sentences(separated by . )
 	  while ((line = br.readLine()) != null) {
-		  
 		  BreakIterator iterator = BreakIterator.getSentenceInstance(Locale.US);
 		  iterator.setText(line);
 		  int start = iterator.first();
@@ -64,30 +60,16 @@ public class preprocessor {
 		  }
 	  }
 	  
-	  
-	  String text = "";
+	  //Stopword removal + lemmatization
 	  for(Sentence S: sentences) {
 		  S.chunks = S.getWords().stream()
 				  .filter(word -> !Constants.stopwords.contains(word))
 				  .collect(toList());
-		  text += String.join("\t",S.chunks.stream().toArray(String[]::new));
-		  
+		  String text = String.join("\t",S.chunks.stream().toArray(String[]::new));
+		  S.chunks = lemmatize(text);
 	  }
-	  
-	  System.err.println(sentences);
-	  
-	 
-	  preprocessor slem = new preprocessor();
-	  
-	
-	  
-      System.out.println(slem.lemmatize(text));
-     
-      
-      //Wordnet w = new Wordnet();
-	  //w.searchWord("book");
-	
-	  }	
+	  return sentences;
+   }	
 	
 	
 	 public List<String> lemmatize(String documentText)
