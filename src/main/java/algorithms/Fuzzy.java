@@ -1,21 +1,15 @@
 package algorithms;
 
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
-
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import static java.util.stream.Collectors.toList;
 
-import org.w3c.dom.NamedNodeMap;
+import java.io.InputStream;
 
 import net.sourceforge.jFuzzyLogic.FIS;
-import net.sourceforge.jFuzzyLogic.rule.Variable;
-import edu.stanford.nlp.ling.AnnotationLookup;
+
 import main.Sentence;
 
 
@@ -26,6 +20,8 @@ import main.Sentence;
 public class Fuzzy {
 	private Sentence title;
 	private List<Sentence> sentences;
+	private List<Sentence> summary;
+	private String stats;
 	private HashMap<String, Integer> word_count;
 	private float maxlen;
 	private float total_len;
@@ -33,10 +29,10 @@ public class Fuzzy {
 	
 
 	public Fuzzy(Sentence title, List<Sentence> sentences) {
-		URL url = getClass().getResource("fuzzyInference.fcl");
-        this.fis = FIS.load(url.getPath(),true);
+		InputStream is = getClass().getResourceAsStream("fuzzyInference.fcl");
+        this.fis = FIS.load(is,true);
         if( fis == null ) { 
-            System.err.println("Can't load file: '" + url.getPath() + "'");
+            System.err.println("Can't load FCL file");
             return;
         }
 		this.title = title;
@@ -46,11 +42,18 @@ public class Fuzzy {
 		_build_word_count();
 		calculate_features();
 		calculate_fuzzy_scores();
+		summarize();
 		
 	}
 	
 	public List<Sentence> getSentences(){
 		return this.sentences;
+	}
+	public List<Sentence> getSummary(){
+		return this.summary;
+	}
+	public String getStats() {
+		return stats;
 	}
 	
 	
@@ -136,7 +139,7 @@ public class Fuzzy {
 		}
 	}
 	
-	public List<Sentence> summary() {
+	private void summarize() {
 		double mean = sentences.stream()
 							  .map(S -> S.fuzzy_score)
 							  .reduce((float)0.0, (x,y)->x+y)/sentences.size();
@@ -144,9 +147,18 @@ public class Fuzzy {
 							   .map(S -> Math.pow((S.fuzzy_score-mean), 2))
 							   .reduce(0.0, (x,y)->x+y)/sentences.size());
 		double cutoff = mean + (3.0/4)*stdev;
+		summary = sentences.stream().filter(S ->S.fuzzy_score>=cutoff).collect(toList());
 		
-		return sentences.stream().filter(S ->S.fuzzy_score>=cutoff).collect(toList());
-		}
+		//calculate stats:
+		float num_words = sentences.stream().map(S -> S.sentence.split(" ").length).reduce(0, (x,y)->x+y);
+		float summary_num_words = summary.stream().map(S -> S.sentence.split(" ").length).reduce(0, (x,y)->x+y);
+		float shrinkage = 100 - 100*summary_num_words/num_words;
+		stats = "extract: "+(int)num_words+"w ,"+
+			    "summary: "+(int)summary_num_words+"w ,"+
+				"Compression: "+shrinkage+"%";
+		
+	}
+	
 	
 
 

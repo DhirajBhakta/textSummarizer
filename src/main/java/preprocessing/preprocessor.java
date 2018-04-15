@@ -6,14 +6,12 @@ package preprocessing;
 import java.io.*;
 import java.text.BreakIterator;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
 import static java.util.stream.Collectors.toList;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
 
 import constants.Constants;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -26,15 +24,16 @@ import edu.stanford.nlp.util.CoreMap;
 
 
 
-import main.Driver;
 import main.Sentence;
 
 
 public class preprocessor {
 	
 	protected StanfordCoreNLP pipeline;
+	private File input_file;
 	
-	public preprocessor() {
+	public preprocessor(File input_file) {
+		this.input_file = input_file;
         Properties props;
         props = new Properties();
         props.put("annotators", "tokenize, ssplit, pos, lemma");
@@ -42,8 +41,7 @@ public class preprocessor {
 	}
 	
 	public List<Sentence> read_doc()throws Exception{
-	  File file = new File("sample_text");
-	  BufferedReader br = new BufferedReader(new FileReader(file));
+	  BufferedReader br = new BufferedReader(new FileReader(input_file));
 	 
 	  String line;
 	  List<Sentence> sentences= new ArrayList<Sentence>();
@@ -68,6 +66,7 @@ public class preprocessor {
 		  String text = String.join("\t",S.chunks.stream().toArray(String[]::new));
 		  S.chunks = lemmatize(text);
 	  }
+	  br.close();
 	  return sentences;
    }	
 	
