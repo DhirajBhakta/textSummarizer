@@ -4,7 +4,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import static java.util.stream.Collectors.toList;
 
 import java.io.InputStream;
 
@@ -17,11 +16,7 @@ import main.Sentence;
 
 
 
-public class Fuzzy {
-	private Sentence title;
-	private List<Sentence> sentences;
-	private List<Sentence> summary;
-	private String stats;
+public class Fuzzy extends Summarizer{
 	private HashMap<String, Integer> word_count;
 	private float maxlen;
 	private float total_len;
@@ -42,20 +37,9 @@ public class Fuzzy {
 		_build_word_count();
 		calculate_features();
 		calculate_fuzzy_scores();
-		summarize();
-		
+		summarize(0.75);		
 	}
-	
-	public List<Sentence> getSentences(){
-		return this.sentences;
-	}
-	public List<Sentence> getSummary(){
-		return this.summary;
-	}
-	public String getStats() {
-		return stats;
-	}
-	
+
 	
 	private void _build_word_count() {
 		for(Sentence S: sentences) {
@@ -63,7 +47,7 @@ public class Fuzzy {
 				word_count.put(word, word_count.getOrDefault(word, 0) +1);
 		}
 	}
-	private void analyse() {
+	protected void analyse() {
 		this.total_len =0;
 		this.maxlen = 0;
 		for(Sentence S: sentences) { 
@@ -138,28 +122,5 @@ public class Fuzzy {
 			S.fuzzy_score = (float)fis.getVariable("output").getValue();			
 		}
 	}
-	
-	private void summarize() {
-		double mean = sentences.stream()
-							  .map(S -> S.fuzzy_score)
-							  .reduce((float)0.0, (x,y)->x+y)/sentences.size();
-		double stdev = Math.sqrt(sentences.stream()
-							   .map(S -> Math.pow((S.fuzzy_score-mean), 2))
-							   .reduce(0.0, (x,y)->x+y)/sentences.size());
-		double cutoff = mean + (3.0/4)*stdev;
-		summary = sentences.stream().filter(S ->S.fuzzy_score>=cutoff).collect(toList());
-		
-		//calculate stats:
-		float num_words = sentences.stream().map(S -> S.sentence.split(" ").length).reduce(0, (x,y)->x+y);
-		float summary_num_words = summary.stream().map(S -> S.sentence.split(" ").length).reduce(0, (x,y)->x+y);
-		float shrinkage = 100 - 100*summary_num_words/num_words;
-		stats = "extract: "+(int)num_words+"w ,"+
-			    "summary: "+(int)summary_num_words+"w ,"+
-				"Compression: "+shrinkage+"%";
-		
-	}
-	
-	
-
 
 }
