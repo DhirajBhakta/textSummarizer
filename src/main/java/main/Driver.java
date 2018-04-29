@@ -79,6 +79,8 @@ public class Driver {
 		
 		File fuzzy_output_dir = createDirectory("FUZZY");
 		File bushy_output_dir = createDirectory("BUSHY");
+		File wnet_output_dir = createDirectory("WORDNET");
+		
 		
 		
 		for(File input_file: dir_listings) {
@@ -91,7 +93,9 @@ public class Driver {
 		    	
 		    	
 		    	WordNet wnet = new WordNet(sentences);
-		    	
+		    	summary = wnet.getSummary();
+		    	stats = wnet.getStats();
+		    	printSummary(input_file.getName(), summary, wnet_output_dir, stats);
 //		    		
 //		    	Fuzzy fuzzy = new Fuzzy(title, sentences);
 //		    	summary= fuzzy.getSummary();

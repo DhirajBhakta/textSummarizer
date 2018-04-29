@@ -20,7 +20,6 @@ import net.didion.jwnl.dictionary.Dictionary;
 public class WordNet extends Summarizer{
 	private HashMap<String, Integer> word_count;
 	private HashMap<String, Integer> word_score;
-	private List<Sentence> sentences;
 	
 	public  WordNet(List<Sentence> sentences) {
 		this.sentences = sentences;
@@ -29,14 +28,15 @@ public class WordNet extends Summarizer{
 		try {
 			JWNL.initialize(new FileInputStream("jwnl14-rc2/config/file_properties.xml"));
 			_build_word_count();
+			analyse();
+			summarize(algorithm.WORDNET,100);
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (JWNLException e) {
 			e.printStackTrace();
 		}
-		analyse();
-		summarize(algorithm.WORDNET,0.75);
+		
 		
 	}
 	
@@ -66,24 +66,12 @@ public class WordNet extends Summarizer{
 				e.printStackTrace();
 			}	
 		}
-		Iterator it = word_score.entrySet().iterator();
-	    while (it.hasNext()) {
-	        Map.Entry pair = (Map.Entry)it.next();
-	        System.out.println(pair.getKey() + " = " + pair.getValue());
-	        it.remove(); // avoids a ConcurrentModificationException
-	    }
 	}
 	@Override
 	protected void analyse() {
-		Set<String> globalChunkSet = word_count.keySet();
-		for(Sentence S: sentences) {
-			for(String chunk: S.chunks) {
-				S.wordnet_score += word_score.get(chunk);
-			}
-		}
-		
-		
-		
+		for(Sentence S: sentences) 
+			for(String chunk: S.chunks) 
+				S.wordnet_score += word_score.getOrDefault(chunk,0);
 	}
 	
 	

@@ -37,7 +37,7 @@ public class Fuzzy extends Summarizer{
 		_build_word_count();
 		calculate_features();
 		calculate_fuzzy_scores();
-		summarize(algorithm.FUZZY,0.75);		
+		summarize(algorithm.FUZZY,100);		
 	}
 
 	

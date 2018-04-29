@@ -1,6 +1,9 @@
 package algorithms;
 
 import static java.util.stream.Collectors.toList;
+
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import main.Sentence;
@@ -12,15 +15,13 @@ public abstract class Summarizer {
 	protected String stats;
 	protected enum algorithm {BUSHY, FUZZY, WORDNET};
 	
-	public Summarizer() {
-		
-	}
-	
 	private float get_score(Sentence S,algorithm algo) {
 		if(algo == algorithm.BUSHY)
 			return S.bushy_score;
 		else if(algo == algorithm.FUZZY)
 			return S.fuzzy_score;
+		else if(algo == algorithm.WORDNET)
+			return S.wordnet_score;
 		return 0;
 	}
 	
@@ -36,15 +37,26 @@ public abstract class Summarizer {
 	
 	abstract protected void analyse();
 	
-	protected void summarize(algorithm algo, double offset_fraction) {
-		double mean = sentences.stream()
-							  .map(S -> get_score(S, algo))
-							  .reduce((float)0.0, (x,y)->x+y)/sentences.size();
-		double stdev = Math.sqrt(sentences.stream()
-							   .map(S -> Math.pow((get_score(S, algo) - mean), 2))
-							   .reduce(0.0, (x,y)->x+y)/sentences.size());
-		double cutoff = mean + (offset_fraction)*stdev;
-		summary = sentences.stream().filter(S ->S.fuzzy_score>=cutoff).collect(toList());
+	protected void summarize(algorithm algo, int max_words) {
+		List<Sentence> sorted_sentences = new ArrayList<Sentence>(sentences);
+		sorted_sentences.sort(new Comparator<Sentence>() {
+		    @Override
+		    public int compare(Sentence s1, Sentence s2) {
+		        if(get_score(s1, algo) == get_score(s2, algo))
+		            return 0;
+		        return (get_score(s1, algo) > get_score(s2, algo)) ? -1 : 1;
+		     }
+		});
+		int word_count =0;
+		float MIN_SCORE=Float.MAX_VALUE;
+		for(Sentence S: sorted_sentences) {
+			word_count += S.getWords().size();
+			MIN_SCORE = (get_score(S, algo) < MIN_SCORE) ? get_score(S,algo): MIN_SCORE;
+			if(word_count > max_words)
+				break;
+		}
+		final float threshold = MIN_SCORE;
+		summary = sentences.stream().filter(S ->get_score(S, algo)>=threshold).collect(toList());
 		calculate_stats();
 	}
 	

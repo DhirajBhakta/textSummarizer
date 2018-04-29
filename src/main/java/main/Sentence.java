@@ -28,6 +28,11 @@ public class Sentence {
 	public float getFuzzyScore() {
 		return fuzzy_score;
 	}
+	public float getWordnetScore() {
+		return wordnet_score;
+	}
+	
+	
 	public List<String> getWords(){
 		return Arrays.asList(sentence.split(" ")).stream()
 					.map(word -> word.replaceAll("[^\\w\\s]",""))
@@ -37,7 +42,7 @@ public class Sentence {
 	@Override
 	public String toString() {
 		return "\n\nSentence [sentence=" + sentence + ", chunks=" + chunks + "\n, f1=" + f1 + "\n, f2=" + f2 + "\n, f3=" + f3
-				+ "\n, f4=" + f4 + "\n, f5=" + f5 + ",\n fuzzy_score=" + fuzzy_score + ",\n bushy_score=" + bushy_score + "]";
+				+ "\n, f4=" + f4 + "\n, f5=" + f5 + ",\n fuzzy_score=" + fuzzy_score + ",\n bushy_score=" + bushy_score + ",\n wordnet_score=" + wordnet_score + "]";
 	}
 	
 	
