@@ -13,7 +13,7 @@ public class BushyPath extends Summarizer{
 		common_words = new int[n][n];
 		analyse();
 		calculate_bushy_scores();
-		summarize(algorithm.BUSHY,0.25);
+		summarize(algorithm.BUSHY,0.75);
 	}
 		
 	protected void analyse() {

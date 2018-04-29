@@ -10,7 +10,7 @@ public abstract class Summarizer {
 	protected List<Sentence> sentences;
 	protected List<Sentence> summary;
 	protected String stats;
-	protected enum algorithm {BUSHY, FUZZY};
+	protected enum algorithm {BUSHY, FUZZY, WORDNET};
 	
 	public Summarizer() {
 		
@@ -45,9 +45,7 @@ public abstract class Summarizer {
 							   .reduce(0.0, (x,y)->x+y)/sentences.size());
 		double cutoff = mean + (offset_fraction)*stdev;
 		summary = sentences.stream().filter(S ->S.fuzzy_score>=cutoff).collect(toList());
-		
-		
-		
+		calculate_stats();
 	}
 	
 	protected void calculate_stats() {

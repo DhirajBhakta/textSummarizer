@@ -14,12 +14,16 @@ public class Sentence {
 	public float f5;
 	public float fuzzy_score;
 	public float bushy_score;
+	public float wordnet_score;
 	
 	
 	
 	
 	public Sentence(String str) {
 		this.sentence = str;
+		this.fuzzy_score = 0;
+		this.bushy_score = 0;
+		this.wordnet_score = 0;
 	}
 	public float getFuzzyScore() {
 		return fuzzy_score;

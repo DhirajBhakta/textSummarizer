@@ -1,21 +1,7 @@
 package main;
 import preprocessing.preprocessor;
 
-//
-//public class Driver {
-//	
-//
-//	public static void main(String[] args)throws Exception
-//	{
-//	
-//		
-//	preprocessor p=new preprocessor();
-//	
-//	p.read_doc();
-//	
-//	}
-//
-//}
+
 
 import java.util.List;
 
@@ -32,9 +18,9 @@ import algorithms.*;
 
 public class Driver {
 
-	public static void printSummary(Sentence title, List<Sentence> sentences, File output_dir, String stats) {
-		File output = new File(output_dir, title.sentence);
-		System.out.println("SUMMARY:"+title.sentence+"------------->"+output_dir.getName()+"::::"+stats);
+	public static void printSummary(String filename, List<Sentence> sentences, File output_dir, String stats) {
+		File output = new File(output_dir, filename);
+		System.out.println("SUMMARY:"+filename+"------------->"+output_dir.getName()+"::::"+stats);
 		StringBuilder summary = new StringBuilder("");
 		for(Sentence S:sentences)
 			summary.append(S.sentence);
@@ -102,16 +88,20 @@ public class Driver {
 		    	String stats;
 		    	Sentence title = sentences.get(0);
 		    	sentences = sentences.subList(1, sentences.size());
-		    		
-		    	Fuzzy fuzzy = new Fuzzy(title, sentences);
-		    	summary= fuzzy.getSummary();
-		    	stats = fuzzy.getStats();
-		    	printSummary(title, summary, fuzzy_output_dir, stats);
-		  	
-		    	BushyPath bushy = new BushyPath(sentences);
-		    	summary = bushy.getSummary();
-		    	stats = bushy.getStats();
-		    	printSummary(title, summary, bushy_output_dir,stats);
+		    	
+		    	
+		    	WordNet wnet = new WordNet(sentences);
+		    	
+//		    		
+//		    	Fuzzy fuzzy = new Fuzzy(title, sentences);
+//		    	summary= fuzzy.getSummary();
+//		    	stats = fuzzy.getStats();
+//		    	printSummary(input_file.getName(), summary, fuzzy_output_dir, stats);
+//		  	
+//		    	BushyPath bushy = new BushyPath(sentences);
+//		    	summary = bushy.getSummary();
+//		    	stats = bushy.getStats();
+//		    	printSummary(input_file.getName(), summary, bushy_output_dir,stats);
 		}
 		}
 
