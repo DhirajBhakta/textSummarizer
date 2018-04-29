@@ -18,6 +18,12 @@ import preprocessing.preprocessor;
 //}
 
 import java.util.List;
+
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
@@ -77,6 +83,8 @@ public class Driver {
 	
 
 	
+
+	
 	public static void main(String[] args) throws Exception {
 		String input_dir = args[0];
 		
@@ -90,10 +98,11 @@ public class Driver {
 		for(File input_file: dir_listings) {
 		    	List<Sentence> sentences = new preprocessor(input_file).read_doc();
 		    	List<Sentence> summary;
+		    	
 		    	String stats;
 		    	Sentence title = sentences.get(0);
 		    	sentences = sentences.subList(1, sentences.size());
-		    	
+		    		
 		    	Fuzzy fuzzy = new Fuzzy(title, sentences);
 		    	summary= fuzzy.getSummary();
 		    	stats = fuzzy.getStats();
