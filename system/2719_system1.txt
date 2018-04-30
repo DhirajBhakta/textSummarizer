@@ -1,0 +1,4 @@
+Washington, Jul 4 (PTI) Scientists, including one of Indian origin, have developed a smart headlight system for the first time that can help drivers see through heavy rain or snowfall and safely navigate roads during stormy nights. 
+The system invented by researchers at Carnegie Mellon University (CMU) in the US improves visibility by constantly redirecting light to shine between particles of precipitation. 
+The system uses a camera to track the motion of raindrops and snowflakes and then applies a computer algorithm to predict where those particles will be just a few milliseconds later. 
+The light projection system then adjusts to deactivate light beams that would otherwise illuminate the particles in their predicted positions. 

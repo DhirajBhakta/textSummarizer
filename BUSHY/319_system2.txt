@@ -1,0 +1,4 @@
+The pothole application, Star Grade, which had gained popularity last monsoon, was restarted after complaints related to potholes poured in. 
+The application started functioning two days ago. 
+Last year, the application recorded more than 900 complaints out of which the maximum complains were from Majiwada, followed by Railadevi and Lokmanya Nagar areas.About the applicationThe residents can download the application, take the photo of a pothole and upload it on the app. 
+The app is backed by GPS (Global Positioning System), so the location of the pothole will be automatically uploaded.Complaints are supposed to be addressed within 24 to 36 hoursThe app displays the status of the complaint along with the details of the complainant.The app is linked to TMC websitesAndroid users can download it from play store while the IOS and Windows users can log on to stargrade.thanecity.gov.in.

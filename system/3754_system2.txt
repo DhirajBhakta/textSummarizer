@@ -1,0 +1,5 @@
+Washington, Apr 17 (PTI) Inspired by the Chinese and Japanese arts of paper-cutting, scientists have developed a light-weight, paper-based device that can harvest energy from body movements to power sensors and watches. 
+Despite the many advances in portable electronic devices, one thing remains constant - the need to plug them into a wall socket to recharge. 
+Portable electronic devices, such as watches, hearing aids and heart monitors, often require only a little energy. 
+They have been working on this approach in recent years, creating triboelectric nanogenerators (TENGs) that can harness the mechanical energy all around us, such as that created by our footsteps, and then use it to power portable electronics. 
+However, most TENG devices take several hours to charge small electronics, such as a sensor, and they are made of acrylic, which is heavy. 

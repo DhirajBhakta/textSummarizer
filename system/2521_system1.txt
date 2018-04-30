@@ -1,0 +1,3 @@
+The month-long CSE study on travel time and traffic speed monitored 13 arterial roads for 12 hours daily. 
+The analysis, which is based on data from Google Maps, shows that roads in Delhi are more congested on weekends, with an average peak speed of 25kmph, less than the weekday figure of 26kmph.  
+They also facilitate inter-city and regional trips by connecting with highways and expressway networks.The analysis was done on the basis of data taken from Google Maps that was noted for every hour from 8 am to 8 pm in June.Traffic speedThe study found that all the 13 selected arterial roads had an average peak speed of 26 km/hr, while the off-peak speed was recorded at 27 km/hr, which is 50%-60% lower than the design speed. 

@@ -1,0 +1,4 @@
+Samsung has announced two of its Chrome OS based laptops -- Chromebook Plus and Chromebook Pro at the Consumer Electronics Show that come with a touch screen display and support for Android apps. 
+The price of the Plus version is $449 (approx Rs 30,500) and will hit the shelves in February, while the other in the second quarter of 2017.Also Read:  Microsoft Surface Pro 5 2-in-1 may launch in Q1 2017  Samsung Chromebook Plus and Chromebook pro are both convertible laptops, meaning you can flip the screen 360-degree and use it as a tablet. 
+But Samsung bundles a stylus with its Chromebooks, same as what you get with a Galaxy Note 5 (or you would have got with your Note 7) that allows you to write and draw using pre-loaded applications -- Google Keep and Samsung ArtCanvas. 
+The only difference is that the Pro version uses Intel Core M3 processor, while the other has an ARM-based Hexa-core CPU with 2xA72 cores and 4xA53 cores. 

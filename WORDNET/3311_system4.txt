@@ -1,0 +1,4 @@
+Mumbai, May 16 (PTI) A cyber security firm today said it has detected over 48,000 ransomware attack attempts in the country, with West Bengal witnessing the most incidents. 
+It said there have been over 700 distress calls by customers in the last few days, following the discovery of the attacks which has impacted 150 countries globally. 
+The top five cities impacted by the WannaCry ransomware are Kolkata followed by Delhi, Bhubaneshwar, Pune and Mumbai, while the top top five states with maximum detections are West Bengal, Maharashtra, Gujarat, NCR (Delhi), and Odisha, it said. 
+It said computers running on the desktop and server editions of the Microsoft Windows operating system are most impacted. 

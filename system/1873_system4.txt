@@ -1,0 +1,3 @@
+"What we have shown here is that we can make tiny, conductive wires of the smallest possible size that essentially assemble themselves," said Hao Yan, postdoctoral researcher at Stanford University in the US. 
+Although there are other ways to get materials to self-assemble, this is the first one shown to make a nanowire with a solid, crystalline core that has good electronic properties, said Nicholas Melosh, from the US Department of Energys SLAC National Accelerator Laboratory. 
+Their size is important because a material that exists in just one or two dimensions - as atomic-scale dots, wires or sheets - can have very different, extraordinary properties compared to the same material made in bulk, Melosh said. 

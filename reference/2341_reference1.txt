@@ -1,0 +1,3 @@
+The Mumbai railways is planning to introduce a software which will help commuters book tickets through Unstructured Supplementary Service Data (USSD) codes. 
+The software will make use of SMS services, which will allow commuters without smart phones to book tickets. 
+Kiosks to aid the service are being installed across 10 railway stations as part of the project's pilot stage. 

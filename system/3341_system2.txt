@@ -1,0 +1,5 @@
+Krishna Chinthapalli, a neurology registrar at?the National Hospital for Neurology and Neurosurgery in London, had said an increasing number of hospitals could be shut down by ransomeware attacks in?an article on the vulnerability of the NHS network in the British Medical Journal on Wednesday, two days before the major cyber hack of the National Health Service (NHS) system on Friday. 
+Patients of the state-funded country-wide service are still facing days of chaos as appointments and surgeries were cancelled after NHS organisations from London to Scotland were hit in the "ransomware" attack yesterday. 
+"This is not targeted at the NHS, its an international attack and a number of countries and organisations have been affected," British Prime Minister Theresa May said. 
+"The National Cyber Security Centre is working closely with NHS Digital to ensure they support the organisations concerned and that they protect patient safety. 
+The malware used in the NHS attack is called WannaCry and attacks Windows operating systems. 

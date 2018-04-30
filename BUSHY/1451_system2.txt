@@ -1,0 +1,5 @@
+The app, created by US-based start up Socratic, allows students to learn how to answer a question just by snapping a photo of it. 
+"Again and again, we hear that students struggle with math. 
+Every student takes math, often for multiple years, and it can be hard to get help from parents and friends," said Shreyans Bhansali, Head of Engineering at Socratic. 
+The app reads math questions - even handwritten ones - and gives students step-by-step solutions and explanations that teach them the underlying concepts and help answer all types of math problems. 
+To build the app, the team looked through countless math questions asked by students and categorised them by the steps required to solve them. 

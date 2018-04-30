@@ -1,0 +1,4 @@
+While government is pushing for digital payments through mobile phones, chipset maker Qualcomm said that wallets and mobile banking applications in India are not using hardware level security which can make online transactions more secure. 
+Users use fingerprint which might be captured ... in India that is the case for most of all digital wallets and mobile banking apps," Qualcomm Senior Director Product Management Sy Choudhury told reporters here. 
+He said that even most famous digital payment application in India is not using hardware level security. 
+"Reason we are saying that none of them is using it because we work with OEMs (original equipment makers)," Choudhury said. 

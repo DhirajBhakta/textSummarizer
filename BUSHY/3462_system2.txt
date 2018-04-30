@@ -1,0 +1,3 @@
+The tube amplifier stage is followed by a patented ultra-high impulse amplifier stage that is directly integrated into the cups of the headphones.Senheiser has used gold-vaporised ceramic electrodes in the headphones. 
+The advantage of this design, it says, is the extremely short distance between the amplifier and the diaphragm which is less than one centimetre in the new HE1. 
+Just like the tubes of the tube amplifier, the system's MOS-FET transistors have a square characteristic curve to prevent the hard distortion that occurs in amplifiers with bi-polar transistors.Sennheiser uses a new amplifier concept in a class that the audio specialist calls Cool Class A. 

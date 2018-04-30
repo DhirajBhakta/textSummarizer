@@ -1,0 +1,4 @@
+Google has started rolling out the Android Nougat 7.1.2 update to all Pixel and Pixel XL users across the globe. 
+The Android Nougat 7.1.2 update brings with a number of bug fixes and improvements targeted at the two Pixel smartphones in particular. 
+A number of problems such as the early shutdown issue, audio cracking issue and the issue of pink banding seen on the camera have been resolved.However, the 7.1.2 update has brought with it an altogether new problem for Pixel owners. 
+It seems some Pixel and Nexus owners will have to make do with traditional means of unlocking the smartphone till a fix is issued.The latest iteration of Android Nougat is now also rolling out to Nexus 6P users enrolled in Google's Android Beta program. 
