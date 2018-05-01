@@ -1,5 +1,0 @@
-Suburban railway commuters who do not have smart phones can still book railway tickets using their mobiles. 
-The railways plan to introduce a software, which will help commuters book tickets through unstructured supplementary service data (USSD) codes, by the end of the year.After the commuter books a ticket, it will  be sent to him via SMS.?
-He must scan this SMS at kiosks that will be installed at railway stations to get a physical copy of his ticket.Kiosks are currently being installed at Chhatrapati Shivaji Maharaj Terminus, Dadar, Thane, Dombivli, Kalyan, Churchgate, Dadar, Bandra, Borivli and Andheri as part of the railways? 
-Commuters can dial the code to have a ticket sent to their phone. 
-Currently, we have only developed USSD codes suburban services. 

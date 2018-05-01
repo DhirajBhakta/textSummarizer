@@ -1,4 +1,3 @@
 New Delhi, Dec 20 (PTI) More than 70 per cent of rural citizens have adopted the methods of e-wallets followed by Unified Payment Interface (UPI) payment option, the Electronics and IT Ministry said today. 
-Rest of the people looked at Unstructured Supplementary Service Data (USSD), Adhaar Enabled Payment System (AEPS) & Cards or Point of Sale(PoS). 
-Similarly, more than 85 per cent of the merchants have adopted the e-Wallet system and 13 per cent have opted for UPI, the statement said. 
-"The speed and scale at which digital transformation in taking place in India is paving the way for a digitally empowered, participative and inclusive society," MeitY Secretary Aruna Sundararajan said. 
+"An overview of the current data available with the Ministry of Electronics & IT (MeitY) shows that more than 70 per cent rural citizens have adopted the methods of e-wallets, 16 per cent opted for Unified Payment Interface (UPI)," the ministry said in a release. 
+Under its Digital Payments awareness and training programme, the Ministry said that Common Service Centre (CSC) network, which provides government service in rural area, has enrolled over 25 lakh rural citizens for digital payments. 

@@ -1,3 +1,0 @@
-A number of problems such as the early shutdown issue, audio cracking issue and the issue of pink banding seen on the camera have been resolved.However, the 7.1.2 update has brought with it an altogether new problem for Pixel owners. 
-Even deleting your configured fingerprints does not work as then the device does not allow you to add any new fingerprints.If you are facing the issue, the only option at this time seems to be to wait for Google to issue an update or try to revert back to Android 7.1.1 Nougat if you can. 
-It seems some Pixel and Nexus owners will have to make do with traditional means of unlocking the smartphone till a fix is issued.The latest iteration of Android Nougat is now also rolling out to Nexus 6P users enrolled in Google's Android Beta program. 

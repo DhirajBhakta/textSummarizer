@@ -1,0 +1,3 @@
+The App Accelerator is initiated with the aim towards delivering specialised support to the Indian developers, including tools and best practices to hone their skills. 
+Every week, the Apple experts will provide briefings and one-on-one app reviews for the Indian developers. 
+With Swift, the Indian developers will be able to write safer and much more reliable codes, in turn, save a lot of time and create richer app experiences as well.Also Read: Dear Apple and Google, please copy this feature from Galaxy S8The App Accelerator set up in Bengaluru is now open to iOS developers in India through a sign-up process on the App Accelerator Bengaluru website (https://developer.apple.com/accelerator/). 

@@ -29,7 +29,7 @@ public class WordNet extends Summarizer{
 			JWNL.initialize(new FileInputStream("jwnl14-rc2/config/file_properties.xml"));
 			_build_word_count();
 			analyse();
-			summarize(algorithm.WORDNET,100);
+			summarize(algorithm.WORDNET,60);
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

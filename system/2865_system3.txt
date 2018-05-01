@@ -1,8 +1,4 @@
-By all file types, we are talking about file formats like apk, mp3, zip and similarly more. 
-According to WaBetaInfo, WhatsApp is testing the feature and may soon roll out across all platforms. 
+Not just doc, ppt, pdf, docx file types,? WhatsApp will soon allow you to share all file types on the chat platform. 
 Until now, users had to upload the large files on Cloud or drive to share it with others. 
-This update will shorten the process of exchanging large size files by simply attaching them within chat.The process of attachment is expected to be similar to how we send other files on chat app now which is using the paper clip icon seen within the app. 
-For example, the maximum file size for iOS is 128MB, Android it is 100MB, Windows Phone 104.86MB and on Web it is 64MB. 
+According to WaBetaInfo,? WhatsApp currently has different maximum file size across different platforms. 
 The new update will apparently allow to send files without any compression. 
-This means you can share files and videos without any compression, thus, retaining the original quality of the photos and videos. 
-The feature is in its beta phase and has been rolled out to select users only. 

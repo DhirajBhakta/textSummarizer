@@ -1,8 +1,0 @@
-The team is the first to demonstrate that human immunodeficiency virus type 1 (HIV-1) replication can be completely shut down and the virus eliminated from infected cells in animals with a powerful gene editing technology known as CRISPR/Cas9. 
-Researchers, including those from Temple University in the US, build on their previous study in which they used transgenic rat and mouse models with HIV-1 DNA incorporated into the genome of every tissue of the animals bodies. 
-They demonstrated that their strategy could delete the targeted fragments of HIV-1 from the genome in most tissues in the experimental animals. 
-The researchers genetically inactivated HIV-1 in transgenic mice, reducing the RNA expression of viral genes by roughly 60 to 95 per cent. 
-They then tested their system in mice acutely infected with EcoHIV, the mouse equivalent of human HIV-1. 
-In the third animal model, latent HIV-1 infection was recapitulated in humanised mice engrafted with human immune cells, including T cells, followed by HIV-1 infection. 
-In all three animal models, the researchers utilised a recombinant adeno-associated viral (rAAV) vector delivery system based on a subtype known as AAV-DJ/8. 
-Researchers also re-engineered their previous gene editing apparatus to carry a set of four guide RNAs, all designed to efficiently excise integrated HIV-1 DNA from the host cell genome and avoid potential HIV-1 mutational escape. 

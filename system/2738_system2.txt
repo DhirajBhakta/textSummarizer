@@ -1,5 +1,2 @@
-"If you are having Maestro debit card, get it replaced free of cost with a new EMV chip based debit card from any PNB branch. 
-All Maestro cards issued by PNB will be blocked or hotlisted on July 31, 2017 for security based reasons," the bank said in a communication to its customers. 
-The replacement is as per RBI advisory issued in 2015, asking all the banks to migrate to a much secured EMV chip based cards, an official of the bank said. 
-The bank has identified that there are about one lakh customers with old Maestro debit cards and has started sending them SMSes as well, an official of the bank said. 
-"However, we have excluded those customers who are not using these Maestro debit cards at all with not even a single transaction in a year as making of cards involves cost as well as time," the official said. 
+New Delhi, Jul 2 (PTI) Punjab National Bank (PNB) Maestro debit cards holders will face a card blockage if they fail to replace it with a more secure EMV chip based card by the end of this month. 
+As per RBI advisory, existing magnetic stripe only cards need to be replaced with EMV chip and pin based cards by December 31, 2018, irrespective of the validity period of the cards. 

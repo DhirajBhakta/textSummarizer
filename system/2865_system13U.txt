@@ -1,0 +1,3 @@
+Not just doc, ppt, pdf, docx file types,? WhatsApp will soon allow you to share all file types on the chat platform. 
+Until now, users had to upload the large files on Cloud or drive to share it with others. 
+This update will shorten the process of exchanging large size files by simply attaching them within chat.The process of attachment is expected to be similar to how we send other files on chat app now which is using the paper clip icon seen within the app. 

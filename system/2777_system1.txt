@@ -1,6 +1,3 @@
-Berlin, Jun 30 (PTI) Scientists have developed magnetic microbots with silver nanoparticles that can zoom around contaminated water and clean up disease-causing bacteria. 
-Drinking water contaminated with pathogenic bacteria can cause serious illnesses that, in areas with spotty medical services, are potentially life-threatening without proper treatment. 
-Water can be disinfected with chlorine or other disinfectants, but there are some hardy bacteria and other microorganisms that are hard to remove. 
-Treating water with a combination of disinfectants or increasing their concentrations can help. 
-However, they remain in the water, and their byproducts can be harmful to human health. 
-In recent years, researchers have been exploring the use of self-propelled micromotors to degrade and capture pollutants in water. 
+Building on this work, researchers from Max-Planck Institute for Intelligent Systems in Germany and Institute for Bioengineering of Catalonia (IBEC) in Spain wanted to see if they could engineer tiny robots to remove waterborne bacteria. 
+One face is made with magnesium, which reacts with water to produce hydrogen bubbles to propel the microbots. 
+The other face is made out of alternating iron and gold layers topped by silver nanoparticles. 

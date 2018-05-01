@@ -1,4 +1,6 @@
-The App Accelerator is initiated with the aim towards delivering specialised support to the Indian developers, including tools and best practices to hone their skills. 
+After Apple decided to make iPhones in India, the company now announces the opening of its new App Accelerator in the IT capital of the country - Bengaluru. 
+Here's how the newly set-up Apple App Accelerator will function. 
 Every week, the Apple experts will provide briefings and one-on-one app reviews for the Indian developers. 
-This will be done with the help of Swift, Apple's powerful and intuitive programming language created to build apps for iOS, Apple TV, and Apple Watch. 
+Not only that, Apple experts at the App Accelerator will also deliver the first-of-its-kind facility to the Indian developers and provide them with further support and guidance. 
+With Swift, the Indian developers will be able to write safer and much more reliable codes, in turn, save a lot of time and create richer app experiences as well.Also Read: Dear Apple and Google, please copy this feature from Galaxy S8The App Accelerator set up in Bengaluru is now open to iOS developers in India through a sign-up process on the App Accelerator Bengaluru website (https://developer.apple.com/accelerator/). 
 "In just the first few weeks, we've already seen some incredible developers here at the App Accelerator Bengaluru, including Practo and Reliance Games, create innovative apps that can meet the needs of customers in India and around the world," says Philip Schiller, senior vice president of Worldwide Marketing. 

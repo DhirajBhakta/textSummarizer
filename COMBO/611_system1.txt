@@ -1,9 +1,0 @@
-Starting life as a 1-bit monochrome licensed version of ZSoft?
-s PC Paintbrush, it wasn?
-But it is not an update to original Paint and doesn?
-t behave like it.Now Microsoft has announced that, alongside Outlook Express, Reader app and Reading list, Microsoft Paint has been signalled for death having been added to the ?
-list.Falling under the deprecated column for apps that are ?
-not in active development and might be removed in future releases?
-, Microsoft Paint?
-s ticket has been called and now it?
-s only a matter of time before it is removed like your favourite piece of old furniture from your childhood home.Paint was never one of the most capable apps, and was limited to the bitmap (BMP) and PCX formats until 1998, but if you wanted to scribble something out using your mouse or make a quick cut and paste job, Paint was always there, even on work computers.The most recent version of Paint for Windows 7 and later was much improved, but still considered feature poor compared to other free alternatives such as the third-party Paint.NET.When Microsoft Paint will officially be removed from Windows has yet to be confirmed, while a precise date for the release of the Windows 10 Autumn Creators Update is equally up in the air. 

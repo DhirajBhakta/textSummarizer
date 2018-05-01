@@ -1,3 +1,0 @@
-"The medical event interferes with the drivers ability to safely drive and operate the car, causing the accident," said Najarian. 
-Researchers, in collaboration with Japanese automotive manufacturer Toyota, wanted to move towards technology that can monitor and analyse the physiology of the person driving and predict if they are going to have adverse cardiac events. 
-"We would like to test hardware we had previously identified, and improve and validate our algorithmic solutions to see what it will take to generate a system that could look at the physiology of a person, provided by high-density electrocardiogram (ECG) measurements, as well as other medical measurements," Najarian said. 

@@ -1,0 +1,4 @@
+India is one of top target countries for web application attacks, according to Akamai Technologies' Q4 2016 State of the Internet/Security Report. 
+With 11. 1 million,? India ranked fourth while US topped the list with 242 million web application attacks in the country. 
+There has been a 27 per cent increase in total web application attacks in Q4. 
+Amongst the Asian countries, India saw 8,638, 666 attacks sourced in the country while China topped the list with 14,275,358 attacks. 

@@ -1,9 +1,0 @@
-About 210 websites of the central and state government departments were found to be displaying personal details and Aadhaar numbers of beneficiaries, Parliament was informed on Wednesday.?
-UIDAI (The Unique Identification Authority of India) has taken note of the same and is regularly monitoring the status to get the Aadhaar data removed from the said websites,? 
-Minister of State for Electronics and IT, PP Chaudhary said in a written reply in Lok Sabha.The monitoring came after ?
-As on July 13, 2017, 123 schemes of various Central Ministries/Departments have been notified under Section 7 or 57 of Aadhaar Act, 2016. 
-In respect of these schemes, Aadhaar number is necessary for the purpose of establishing identity of an individual to enable receipt of subsidies, benefits and services etc,? 
-he added.To another query, he said that the linkage of Aadhaar number with PAN (Permanent Account Number) database will allow a ?
-robust way? 
-of de-duplication as the former is based on biometric attributes of finger prints and iris images.?
-he said.Seeding of Aadhaar will allow weeding out any undetected duplicate PANs, he added.PAN is the key identifier of taxable entity and aggregator of all financial transactions undertaken by the entity. 

@@ -1,0 +1,2 @@
+Any loss occurring after reporting of the unauthorised transaction will be borne by the bank, RBI said while issuing revised directions on Customer Protection Limiting Liability of Customers in Unauthorised Electronic Banking Transactions. 
+Referring to reversal timeline for Zero Liability/ Limited Liability of customer, RBI said the bank should credit (shadow reversal) the amount involved in the unauthorised electronic transaction to the customer's account within 10 working days of reporting of the fraud. 

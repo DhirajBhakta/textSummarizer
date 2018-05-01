@@ -1,5 +1,0 @@
-While government is pushing for digital payments through mobile phones, chipset maker Qualcomm said that wallets and mobile banking applications in India are not using hardware level security which can make online transactions more secure. 
-Users use fingerprint which might be captured ... in India that is the case for most of all digital wallets and mobile banking apps," Qualcomm Senior Director Product Management Sy Choudhury told reporters here. 
-When you download a mobile banking app you dont know if it is using hardware security or not," Choudhury said. 
-He said that Qualcomm is now approaching digital payments companies for using secure environment for processing payments on mobile phone. 
-He said that Qualcomm is also coming up with new feature in its mobile chipsets from 2017 that verify user with payment gateway using unique features like device id, phone manufacturer signature, Android version in the phone, root kit of operating system, location and time, which will be nearly impossible to duplicate. 

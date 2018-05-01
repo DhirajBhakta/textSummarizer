@@ -1,5 +1,2 @@
-"A large number of traffic incidents are caused by medical conditions while driving, specifically cardiovascular events, such as myocardial infraction and myocardial ischemia," said Kayvan Najarian, from University of Michigan in the US. 
-"The medical event interferes with the drivers ability to safely drive and operate the car, causing the accident," said Najarian. 
-Researchers, in collaboration with Japanese automotive manufacturer Toyota, wanted to move towards technology that can monitor and analyse the physiology of the person driving and predict if they are going to have adverse cardiac events. 
-Researchers are creating a system that could be placed in the vehicle to monitor and predict an adverse cardiac event. 
-"We would like to test hardware we had previously identified, and improve and validate our algorithmic solutions to see what it will take to generate a system that could look at the physiology of a person, provided by high-density electrocardiogram (ECG) measurements, as well as other medical measurements," Najarian said. 
+Washington, Jun 13 (PTI) Scientists are developing a new system that can predict if a car driver is about to have a heart attack, a feature that would help avoid road accidents due to an unexpected cardiac event. 
+You need to use a high-quality monitoring device in the vehicle that, despite all the in-vehicle noise, could reliably register the drivers ECG without being large and obtrusive," he added. 

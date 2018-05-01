@@ -1,4 +1,8 @@
 Mumbai, May 16 (PTI) A cyber security firm today said it has detected over 48,000 ransomware attack attempts in the country, with West Bengal witnessing the most incidents. 
 Quick Heal Technologies has "detected over 48,000 MS-17- 010 Shadow Broker exploit hits responsible for WannaCry ransomware outbreak in India", it said in a statement. 
+"Our observation is that the attack is not focused towards any particular industry but it is widely spread across industries especially those organisations which are online and connected," Quick Heal Technologies managing director Sanjay Katkar said. 
+The Pune-based company said 60 per cent of the attempts by the malicious WannaCry ransomware were targeted at enterprises, while 40 per cent were on individual customers. 
+It said there have been over 700 distress calls by customers in the last few days, following the discovery of the attacks which has impacted 150 countries globally. 
 The top five cities impacted by the WannaCry ransomware are Kolkata followed by Delhi, Bhubaneshwar, Pune and Mumbai, while the top top five states with maximum detections are West Bengal, Maharashtra, Gujarat, NCR (Delhi), and Odisha, it said. 
 The company claimed it "successfully detected" the ransomware activity and "cleaned the malicious file responsible for file encryption from all the attacked systems". 
+It said computers running on the desktop and server editions of the Microsoft Windows operating system are most impacted. 

@@ -5,3 +5,4 @@ It scored 100 points on another version of the test.
 "It would take two hours for a human to finish the test. 
 I hope next year the machine can improve its performance on logical reasoning and computer algorithms and score over 130," said Lin Hui, CEO of Chengdu Zhunxingyunxue Technology, the company which developed the robot. 
 In February, the robot scored 93 on one math test, slightly higher than the passing grade of 90. 
+Chinas Ministry of Science and Technology plans to build AI robots by 2020 that would be smart enough to gain admission to leading universities through the entrance exam, the state- run news agency Xinhua reported. 

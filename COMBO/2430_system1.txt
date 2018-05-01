@@ -1,5 +1,0 @@
-A newly-developed hands-free musical instrument that now allows people to make music with their minds is bringing a new meaning to ?
-Researchers hope that this new instrument will help empower and rehabilitate patients with motor disabilities such as those from stroke, spinal cord injury or amputation.?
-I thought it would be great to use a brain-computer instrument to enable patients to play music again without requiring movement.?
-The Encephalophone can be controlled via two independent types of brain signals: either those associated with the visual cortex (ie closing one?
-s eyes), or those associated with thinking about movementThe Encephalophone is based on brain-computer interfaces using an old method, called electroencephalography, which measures electrical signals in the brain. 

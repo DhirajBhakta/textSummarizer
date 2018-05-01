@@ -1,0 +1,3 @@
+Washington, Feb 28 (PTI) Scientists have developed a novel computer method called ZeitZeiger that uses a sample of blood to accurately predict circadian time - the time of day according to a persons body clock. 
+"This is the first study to use genome-wide expression data from many individuals to develop a biomarker of the circadian clock in human blood," Hughey said. 
+"This shows that when given data for almost every gene in the genome, the algorithm can figure out which set of genes gives the best predictions, even if they are not core clock genes," Hughey said. 

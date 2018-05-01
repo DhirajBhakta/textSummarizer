@@ -1,9 +1,0 @@
-How??
-He must scan this SMS at kiosks that will be installed at railway stations to get a physical copy of his ticket.Kiosks are currently being installed at Chhatrapati Shivaji Maharaj Terminus, Dadar, Thane, Dombivli, Kalyan, Churchgate, Dadar, Bandra, Borivli and Andheri as part of the railways? 
-pilot project.Centre for Railway Information System (CRIS), the organisation behind the software, said it was currently being tested. ?
-Commuters can dial the code to have a ticket sent to their phone. 
-They can print tickets at kiosks installed at the stations. 
-Currently, we have only developed USSD codes suburban services. 
-But, we plan to form codes for long-distance codes too,? 
-said Uday Bobhate, general manager, CRIS. 
-As many as 5,000 mobile tickets on the Central Railway and 4,000 on the Western Railway are sold daily. 

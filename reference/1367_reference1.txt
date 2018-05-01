@@ -1,4 +1,1 @@
-The Delhi Police is using a new software, which accesses real-time data from its helpline and helps identify crime hotspots. 
-Police can then deploy enough policemen at these places. 
-"In a mega city, we believe a lot of crimes are predictable and can be curbed," said an official. 
-The software will replace manual data gathering, which happens every 15 days.
+The Delhi Police is using a new software, which accesses real-time data from its helpline and helps identify crime hotspots. Police can then deploy enough policemen at these places. "In a mega city, we believe a lot of crimes are predictable and can be curbed," said an official. The software will replace manual data gathering, which happens every 15 days.

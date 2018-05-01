@@ -1,4 +1,0 @@
-The new technology allows clients to use their voiceprints for authentication rather than having to remember multiple PINs or respond to questions used for verifying their identities, Citi South Asia Head (Operations & Technology) Anand Chopra said. 
-The new authentication solution is fast, secure and convenient as verification is completed automatically within 15 seconds while clients speak to the (bank) official when they call CitiPhone Banking, the 24-hour hotline service. 
-When clients call CitiPhone Banking, they can choose to enroll for this service by having their voice recorded to generate their unique voiceprint. 
-Clients can enroll for the voice biometrics authentication by calling CitiPhone Banking. 

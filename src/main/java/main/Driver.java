@@ -16,6 +16,8 @@ import java.io.PrintStream;
 import algorithms.*;
 
 public class Driver {
+	
+	public static final int WORD_LIMIT=60;
 
 	public static void printSummary(String filename, List<Sentence> sentences, File output_dir, String stats) {
 		File output = new File(output_dir, filename);
@@ -66,10 +68,103 @@ public class Driver {
 		return dir;		
 	}
 	
-    public static void reposition(List<Sentence> sentences) {
-    	
-    }
+
 	
+	
+	public static List<Sentence> combine_2_summaries_by_union(List<Sentence> sentences, 
+			List<Sentence> summary1, 
+			List<Sentence> summary2) {
+		
+		List<Sentence> final_summary = new ArrayList<Sentence>();
+		int word_count = 0;
+		for(Sentence S: sentences) {
+			if(word_count>WORD_LIMIT)
+				break;
+			if(summary1.contains(S) || summary2.contains(S)) {
+				final_summary.add(S);
+				word_count+=S.getWords().size();
+			}
+		}		
+		return final_summary;
+	}
+	
+	public static List<Sentence> combine_3_summaries_by_union(List<Sentence> sentences, 
+			List<Sentence> summary1, 
+			List<Sentence> summary2,
+			List<Sentence> summary3) {
+		
+		List<Sentence> final_summary = new ArrayList<Sentence>();
+		int word_count = 0;
+		for(Sentence S: sentences) {
+			if(word_count>WORD_LIMIT)
+				break;
+			if(summary1.contains(S) || summary2.contains(S) || summary3.contains(S)) {
+				final_summary.add(S);
+				word_count+=S.getWords().size();
+			}
+		}		
+		return final_summary;
+	}
+	
+	public static List<Sentence> combine_2_summaries_by_intersection_union(List<Sentence> sentences, 
+			List<Sentence> summary1, 
+			List<Sentence> summary2) {
+		
+		List<Sentence> final_summary = new ArrayList<Sentence>();
+		int word_count = 0;
+		for(Sentence S: summary1)
+			if(summary2.contains(S)) {
+				final_summary.add(S);
+				word_count+=S.getWords().size();
+			}
+		for(Sentence S: sentences) {
+			if(word_count>WORD_LIMIT)
+				break;
+			if(!final_summary.contains(S) && (summary1.contains(S) || summary2.contains(S))) {
+				final_summary.add(S);
+				word_count+=S.getWords().size();
+			}
+		}
+		List<Sentence> _final_summary = new ArrayList<Sentence>();
+		for(Sentence S: sentences)
+			if(final_summary.contains(S))
+				_final_summary.add(S);
+		
+		return _final_summary;
+		
+	}
+	
+	
+
+	
+	
+	public static List<Sentence> combine_3_summaries_by_intersection_union(List<Sentence> sentences, 
+			List<Sentence> summary1, 
+			List<Sentence> summary2,
+			List<Sentence> summary3) {
+		
+		List<Sentence> final_summary = new ArrayList<Sentence>();
+		int word_count = 0;
+		for(Sentence S: summary1)
+			if(summary2.contains(S) && summary3.contains(S)) {
+				final_summary.add(S);
+				word_count+=S.getWords().size();
+			}
+		for(Sentence S: sentences) {
+			if(word_count>WORD_LIMIT)
+				break;
+			if(!final_summary.contains(S) && (summary1.contains(S) || summary2.contains(S) || summary3.contains(S))) {
+				final_summary.add(S);
+				word_count+=S.getWords().size();
+			}
+		}
+		List<Sentence> _final_summary = new ArrayList<Sentence>();
+		for(Sentence S: sentences)
+			if(final_summary.contains(S))
+				_final_summary.add(S);
+		
+		return _final_summary;		
+	}
 
 	
 	public static void main(String[] args) throws Exception {
@@ -79,10 +174,22 @@ public class Driver {
 		File[] dir_listings = dir.listFiles();
 		System.out.println("DIR sice:"+dir_listings.length);
 		
+		File wnet_output_dir = createDirectory("WORDNET");
 		File fuzzy_output_dir = createDirectory("FUZZY");
 		File bushy_output_dir = createDirectory("BUSHY");
-		File wnet_output_dir = createDirectory("WORDNET");		
-		File summary_output_dir = createDirectory("COMBO");
+		
+		File wnet_fuzzy_output_dir = createDirectory("WORDNET_FUZZY");
+		File wnet_bushy_output_dir = createDirectory("WORDNET_BUSHY");
+		File bushy_fuzzy_output_dir = createDirectory("BUSHY_FUZZY");
+		File wnet_fuzzy_union_output_dir = createDirectory("WORDNET_FUZZY_UNION");
+		File wnet_bushy_union_output_dir = createDirectory("WORDNET_BUSHY_UNION");
+		File bushy_fuzzy_union_output_dir = createDirectory("BUSHY_FUZZY_UNION");
+		File combo_output_dir = createDirectory("COMBO");
+		File combo_union_output_dir = createDirectory("COMBO_UNION");
+		
+		
+		
+			
 		
 		int i=0;
 		for(File input_file: dir_listings) {
@@ -94,6 +201,7 @@ public class Driver {
 		    	List<Sentence> bushy_summary;
 		    	List<Sentence> summary = new ArrayList<Sentence>();
 		    	
+		    	String filename = input_file.getName();
 		    	
 		    	String stats;
 		    	Sentence title = sentences.get(0);
@@ -103,40 +211,45 @@ public class Driver {
 		    	WordNet wnet = new WordNet(sentences);
 		    	wnet_summary = wnet.getSummary();
 		    	stats = wnet.getStats();
-		    	printSummary(input_file.getName(), wnet_summary, wnet_output_dir, stats);
+		    	printSummary(filename+"_system1.txt", wnet_summary, wnet_output_dir, stats);
 		    		
 		    	Fuzzy fuzzy = new Fuzzy(title, sentences);
 		    	fuzzy_summary= fuzzy.getSummary();
 		    	stats = fuzzy.getStats();
-		    	printSummary(input_file.getName(), fuzzy_summary, fuzzy_output_dir, stats);
+		    	printSummary(filename+"_system2.txt", fuzzy_summary, fuzzy_output_dir, stats);
 		  	
 		    	BushyPath bushy = new BushyPath(sentences);
 		    	bushy_summary = bushy.getSummary();
 		    	stats = bushy.getStats();
-		    	printSummary(input_file.getName(), bushy_summary, bushy_output_dir,stats);
+		    	printSummary(filename+"_system3.txt", bushy_summary, bushy_output_dir,stats);
 		
-		    	int word_count = 0;
-		    	for(Sentence S: wnet_summary)
-		    		if(fuzzy_summary.contains(S) && bushy_summary.contains(S)) {
-		    			summary.add(S);
-		    			word_count += S.getWords().size();
-		    		}
 		    	
-		    	for(Sentence S: sentences) {
-		    		if(word_count>100)
-		    			break;
-		    		if(!summary.contains(S) &&(wnet_summary.contains(S) || fuzzy_summary.contains(S) || bushy_summary.contains(S))) {
-		    			summary.add(S);
-		    			word_count += S.getWords().size();
-		    		}
-		    	}
-		    	List<Sentence> _summary = new ArrayList<Sentence>();
-		    	for(Sentence S: sentences) 
-		    		if(summary.contains(S))
-		    			_summary.add(S);
-		    	summary = _summary;
-		    	printSummary(input_file.getName(), summary, summary_output_dir,"");
 		    	
+		    	
+		    	summary = combine_2_summaries_by_intersection_union(sentences, wnet_summary, fuzzy_summary);
+		    	printSummary(filename+"_system12.txt", summary,wnet_fuzzy_output_dir,"");
+		    	
+		    	summary = combine_2_summaries_by_intersection_union(sentences, wnet_summary, bushy_summary);
+		    	printSummary(filename+"_system13.txt", summary,wnet_bushy_output_dir,"");
+		    	
+		    	summary = combine_2_summaries_by_intersection_union(sentences, bushy_summary, fuzzy_summary);
+		    	printSummary(filename+"_system23.txt", summary,bushy_fuzzy_output_dir,"");
+		    	
+		    	summary = combine_2_summaries_by_union(sentences, wnet_summary, fuzzy_summary);
+		    	printSummary(filename+"_system12U.txt", summary,wnet_fuzzy_union_output_dir,"");
+		    	
+		    	summary = combine_2_summaries_by_union(sentences, wnet_summary, bushy_summary);
+		    	printSummary(filename+"_system13U.txt", summary,wnet_bushy_union_output_dir,"");
+
+		    	summary = combine_2_summaries_by_union(sentences, bushy_summary, fuzzy_summary);
+		    	printSummary(filename+"_system23U.txt", summary,bushy_fuzzy_union_output_dir,"");
+
+		    	summary = combine_3_summaries_by_intersection_union(sentences, wnet_summary, fuzzy_summary, bushy_summary);
+		    	printSummary(filename+"_system123.txt", summary,combo_output_dir,"");
+
+		    	summary = combine_3_summaries_by_union(sentences, wnet_summary, fuzzy_summary, bushy_summary);
+		    	printSummary(filename+"_system123U.txt", summary,combo_union_output_dir,"");
+
 		    }
 		}
 

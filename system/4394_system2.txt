@@ -1,12 +1,1 @@
-Haemorrhoidectomy: Surgery to remove haemorrhoids, swollen and inflamed veins in the rectum and anus4. 
-Haemorrhoidectomy + Fissurectomy: Surgery to remove haemorrhoids along with repair of a tear in the lining of the anus6. 
-Appendectomy (Laparoscopic): Surgery to remove the appendix10. 
-Excision of Pilonidal Sinus With Flap Cover: Surgery to remove an abnormal skin growth at the tailbone that contains hair and skin and covering the area with a skin flap11. 
-Excision of Pilonidal Sinus with Primary Closure: Surgery to remove an abnormal skin growth at the tailbone that contains hair and skin and suturing the wound12. 
-Thyroidectomy (Total/Subtotal): Surgery to remove part or all of the thyroid gland13. 
-Breast Lumpectomy: Surgery to remove cancerous lumps from the breast14. 
-Mastoidectomy: Surgery to remove diseased cells of mastoid bone in inner ear16. 
-Tonsillectomy: Surgery to remove tonsils 17. 
-Unilateral: Surgery to remove non-cancerous growth within the nose20. 
-Bilateral: Surgery to remove non-cancerous growth inside the nose21. 
-Cortical Mastoidectomy with Myringoplasty: Surgery to remove mastoid cells without affecting the middle ear along with closure of perforation in eardrums22. 
+The AAP government has tied with 41 private hospitals in Delhi to facilitate 30 surgeries free of charge for patients referred by government hospitals in the Capital.It will reimburse these National Accreditation Board for Hospitals and Healthcare Providers-accredited hospitals at Central Government Health Scheme (CGHS) rates for the complete treatment.It will including pre-surgery consultation, surgery, medicines, food and hospital stay, and follow-ups for a month after discharge.Patients visiting Delhi government hospitals have to wait anywhere between three months and two years to undergo these surgeries. 

@@ -1,3 +1,1 @@
-Stanford scientists have used the smallest possible diamond bits (diamondoids) to assemble atoms into three-atom-wide electrical wires. 
-The core of each block of the nanowire is formed by copper and sulphur atoms, while diamondoids form the insulating outer shell. 
-The technique could be used for making fabrics that produce electricity and optoelectronic devices that employ both current and light.
+Stanford scientists have used the smallest possible diamond bits (diamondoids) to assemble atoms into three-atom-wide electrical wires. The core of each block of the nanowire is formed by copper and sulphur atoms, while diamondoids form the insulating outer shell. The technique could be used for making fabrics that produce electricity and optoelectronic devices that employ both current and light.

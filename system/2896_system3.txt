@@ -1,4 +1,3 @@
-Washington, Jun 23 (PTI) Inspired by the nanostructures found on moth eyes, scientists have developed a new anti- reflection film that could allow people to read from their smartphones and tablets even in bright sunlight. 
-The film exhibits a surface reflection of just 0.23 per cent, much lower than the iPhones surface reflection of 4.4 per cent, for example. 
-"Using our flexible anti-reflection film on smartphones and tablets will make the screen bright and sharp, even when viewed outside," said Shin-Tson Wu from the University of Central Florida in the US. 
-The eyes of moths are covered with a pattern of antireflective nanostructures that allow moths to see in the dark and prevent eye reflections that might be seen by predators. 
+"In addition to exhibiting low reflection, our nature- inspired film is also scratch resistant and self-cleaning, which would protect touch screens from dust and fingerprints," said Wu, who led the study published in the journal Optica. 
+The coating can also be used with flexible display applications such as phones with screens that fold like a book, which are expected to hit the market as soon as next year. 
+Many of todays smartphones use a sensor to detect bright ambient light and then boost the screens brightness level enough to overcome the strong surface reflection. 

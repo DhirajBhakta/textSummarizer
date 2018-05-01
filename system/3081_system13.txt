@@ -1,0 +1,3 @@
+Beijing, Jun 8 (PTI) An artificial intelligence robot that took a college entrance exam in China has managed to scrape a below average grade, although it finished the test much faster than humans. 
+The robot, AI-MATHS, completed two versions of the exams math test. 
+It finished the test in 22 minutes, scoring 105 points out of 150 points, without Internet support. 
